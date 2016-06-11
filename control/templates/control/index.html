@@ -1,9 +1,40 @@
-<h1>Press the button!</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Control Your own robot!</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  </head>
 
-<form method="post">
-  {% csrf_token %}
-  <button name="Button" value="Left">Left</button>
-  <button name="Button" value="Forward">Forward</button>
-  <button name="Button" value="Backward">Backward</button>
-  <button name="Button" value="Right">Right</button>
-</form>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>Movement</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <form method="post">
+            <div class="form-group">
+            {% csrf_token %}
+
+            <div class="btn-group btn-group-justified" role="group">
+              <div class="btn-group" role="group">
+                <button name="Button" value="Left" class="btn btn-default">Left</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button name="Button" value="Forward" class="btn btn-default">Forward</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button name="Button" value="Backward" class="btn btn-default">Backward</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button name="Button" value="Right" class="btn btn-default">Right</button>
+              </div>
+            </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
