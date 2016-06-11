@@ -1,0 +1,9 @@
+<h1>Press the button!</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <button name="Button" value="Left">Left</button>
+  <button name="Button" value="Forward">Forward</button>
+  <button name="Button" value="Backward">Backward</button>
+  <button name="Button" value="Right">Right</button>
+</form>

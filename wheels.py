@@ -20,14 +20,14 @@ class Wheels:
         self.right.stop()
         self.left.stop()
 
-    def turn_left(self, t):
+    def turn_right(self, t):
         self.right.backward()
         self.left.forward()
         sleep(t)
         self.right.stop()
         self.left.stop()
 
-    def turn_right(self, t):
+    def turn_left(self, t):
         self.right.forward()
         self.left.backward()
         sleep(t)
